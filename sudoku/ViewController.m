@@ -343,17 +343,31 @@
                 @"Use 'Check' to verify your progress. Use 'Easy', 'Medium' or 'Hard' to adjust the puzzle difficulty.\n"];
             message = [message stringByAppendingString:
                 @"Use 'Solve' or 'Hide' to show and hide the puzzle solution. Use 'New' to generate a new puzzle.\n"];
-
-            UIAlertController *controller = [UIAlertController
-                alertControllerWithTitle:@"Help" message:message preferredStyle:UIAlertControllerStyleActionSheet];
-
-            UIAlertAction * action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * act) {
-                [controller dismissViewControllerAnimated:YES completion:nil];
-            }];
-
-            [controller addAction:action];
-
-            [self showViewController:controller sender:self];
+//
+//            UIAlertController *controller = [UIAlertController
+//                alertControllerWithTitle:@"Help" message:message preferredStyle:UIAlertControllerStyleActionSheet];
+//
+//            UIAlertAction * action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * act) {
+//                [controller dismissViewControllerAnimated:YES completion:nil];
+//            }];
+//
+//            [controller addAction:action];
+//
+//            [self showViewController:controller sender:self];
+            
+            UIAlertController *controller = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleActionSheet];
+            
+            //[controller addAction:[UIAlertAction actionWithTitle:@"Help" style:UIAlertActionStyleDefault handler:nil]];
+            [controller addAction:[UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleDestructive handler:nil]];
+            
+            // UIActionControllerの`popoverPresentationController`を設定する
+            controller.popoverPresentationController.sourceRect = CGRectMake(100.0, 100.0, 20.0, 20.0);
+            controller.popoverPresentationController.sourceView = self.view;
+            
+            // UIBarButtonItemから出すなら
+            // controller.popoverPresentationController.barButtonItem = sender;
+            
+            [self presentViewController:controller animated:YES completion:nil];
 
         } break;
 
