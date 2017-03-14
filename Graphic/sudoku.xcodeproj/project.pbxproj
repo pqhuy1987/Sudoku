@@ -187,7 +187,7 @@
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
 				TargetAttributes = {
 					BB5C3E225409418A6AED64B8 = {
-						DevelopmentTeam = FSP2U7T379;
+						DevelopmentTeam = VC346ZAH77;
 					};
 				};
 			};
@@ -278,11 +278,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FSP2U7T379;
+				DEVELOPMENT_TEAM = VC346ZAH77;
 				INFOPLIST_FILE = sudoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.digital.beijing.100;
+				PRODUCT_BUNDLE_IDENTIFIER = com.graphic.paris.100;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -408,11 +408,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FSP2U7T379;
+				DEVELOPMENT_TEAM = VC346ZAH77;
 				INFOPLIST_FILE = sudoku/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.digital.beijing.100;
+				PRODUCT_BUNDLE_IDENTIFIER = com.graphic.paris.100;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

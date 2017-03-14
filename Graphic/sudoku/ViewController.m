@@ -60,8 +60,12 @@
     [super viewDidLoad];
     
     //self.view.backgroundColor = [UIColor whiteColor];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Launch"]];
-
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"Launch"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
     _difficulty = PuzzleDifficultyEasy;
     _generator = [[SudokuGenerator alloc] init];
